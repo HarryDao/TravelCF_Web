@@ -1,5 +1,4 @@
 const NodeMailer = require('nodemailer');
-const SMTPTransport = require('nodemailer-smtp-transport');
 
 const { EMAIL: { service, auth } } = require('../../configs/server');
 
@@ -7,7 +6,7 @@ class Email {
     constructor() {
         this.Send = this.Send.bind(this);
 
-        this.transporter = NodeMailer.createTransport(SMTPTransport({ service, auth }));
+        this.transporter = NodeMailer.createTransport({ service, auth });
     }
 
     Send({ to, subject, html }) {
