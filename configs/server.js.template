@@ -1,0 +1,26 @@
+module.exports = {
+    PORT: process.env.PORT || 3101,
+    FRONT_APP_URL: process.env.FRONT_APP_URL,
+    PSQL_URL: process.env.PSQL_URL,
+    EMAIL: {
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        },
+    },
+    JWT: {
+        SECRET: process.env.TOKEN_SECRET,
+        TOKEN_ID_LENGTH: 24
+    },
+    MAX_SAVED_SEARCHES: 5,
+    OAUTH_GOOGLE: {
+        CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+        CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+        REDIRECT_URL: process.env.GOOGLE_REDIRECT_URL,
+        SCOPES: ['https://www.googleapis.com/auth/userinfo.email'],
+        IOS_ID: process.env.GOOGLE_IOS_ID,
+        ANDROID_ID: process.env.GOOGLE_ANDROID_ID,
+        DEFAULT_PASSWORD: '1' //THIS MUST BE AN INVALID PASSWORD
+    }
+}

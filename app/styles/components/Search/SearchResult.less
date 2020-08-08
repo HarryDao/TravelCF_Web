@@ -1,0 +1,198 @@
+div.search-result {
+    > .way {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: @white;
+
+        > .content {
+            > .title {
+                .title_xlarge;
+            }
+    
+            > .filter {
+                > select {
+                    .select_base;
+                    .text_normal;
+                    padding-left: 10px;
+                    padding-right: 25px;
+                    background-color: @white;
+                    color: @aqua_darker;
+                }
+                > i {
+                    color: @aqua_darker;
+                    margin-left: -15px;
+                }
+            }
+    
+            > .trips {
+                width: 100%;
+                margin: 20px auto;
+    
+                > table.trip {
+                    width: 100%;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    border-collapse: collapse;
+                    background-color: @aqua_darker;
+                    border-radius: 5px;
+    
+                    > thead > tr {
+                        display: none;
+                    }
+                    > tbody > tr {
+                        > td {
+                            
+                            &.info {
+                                width: 80%;
+        
+                                > table {
+                                    width: 100%;
+                                    padding: 10px 15px;
+                                    
+    
+                                    > tbody > tr {
+                                        &.price {
+                                            display: none;
+                                        }
+                                        &.duration {
+                                            > td {
+                                                .text_normal;
+                                                font-weight: 600;
+                                                padding-top: 15px;
+                                                padding-bottom: 15px;
+                                            }
+                                        }
+        
+                                        &.flight-info {
+                                            > td {
+                                                padding-top: 15px;
+                                                padding-bottom: 15px;
+                                                &.origin, &.destination {
+                                                    width: 20%;
+                                                    > .summary {
+                                                        .title_normal;
+                                                        color: @aqua;
+                                                    }
+    
+                                                    > .city {
+                                                        .text_normal;
+                                                        margin-bottom: none;
+                                                    }
+    
+                                                    > .time {
+                                                        .text_small;
+                                                    }
+                                                }
+                                                &.airplane-direction {
+                                                    width: 30%;
+    
+                                                    > img {
+                                                        margin-left: 20%;
+                                                        padding-top: 10px;
+                                                        background-color: transparent;
+                                                        width: 20%;
+                                                    }
+                                                }
+                                                &.airline {
+                                                    width: 30%;
+                                                    text-align: center;
+                                                    > img {
+                                                        max-width: 50%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+        
+                            &.price {
+                                width: 20%;
+                                background-color: @white;
+                                text-align: center;
+                                color: @aqua_darker;
+                                border-top-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+    
+                                > h1 {
+                                    .title_large;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .onMobile({
+        > .way {
+            > .content {
+                > .title {
+                    .title_large;
+                }
+    
+                > .trips {
+                    > table.trip {
+                        > thead > tr {
+                            display: table-row;
+                            > td {
+                                background-color: @white;
+                                color: @aqua_darker;
+                                text-align: center;
+                                > h1 {
+                                    .title_normal;
+                                }
+                            }
+    
+                        }
+                        > tbody > tr {
+                            > td {
+                                &.info {
+                                    width: 100%;
+    
+                                    > table {
+                                        padding-left: 5px;
+                                        padding-right: 5px;
+    
+                                        > tbody > tr {
+                                            &.flight-info {
+                                                td > {
+                                                    &.origin {
+                                                        width: 30%;
+                                                    } 
+                                                    &.destination {
+                                                        width: 35%;
+                                                    }
+                                                    &.airplane-direction {
+                                                        width: 15%;
+    
+                                                        > img {
+                                                            width: 50%;
+                                                            margin-left: 0%;
+                                                        }
+                                                    }
+                                                    &.airline {
+                                                        width: 20%;
+                                                        > img {
+                                                            max-width: 90%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &.price {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+}

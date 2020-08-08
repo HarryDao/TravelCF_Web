@@ -1,0 +1,175 @@
+div.login, div.request-reset-password, div.reset-password {
+    color: @white;
+    padding: 20px 20px;
+
+    > h1 {
+        .title_xlarge;
+        text-align: center;
+        padding: 10px;
+    }
+
+    > .invalid {
+        text-align: center;
+        > h1 {
+            .title_large;
+            color: @red_light;
+        }
+        > h4 {
+            .text_normal;
+        }
+    }
+
+    > form {
+        width: 40%;
+        margin: 0 auto 80px;
+
+        > .message {
+            .text_large;
+            .ts_fast;
+            text-align: center;
+            font-weight: 600;
+
+            &.error {
+                color: @red_light;
+
+            }
+
+            &.success {
+                color: @green_light;
+            }
+
+            &.additional {
+                .text_normal;
+            }
+        }
+
+
+        > .input-group {
+            margin: 10px auto;
+            padding: 5px;
+
+            > label {
+                .text_large;
+                color: @aqua;
+            }
+            > input {
+                .input_base;
+                .text_medium;
+                width: 100%;
+                margin-top: 10px;
+                padding: 7px;
+
+                &[type=checkbox] {
+                    width: auto;
+                    
+                }
+
+            }
+
+            > .error {
+                .text_medium;
+                color: @red_light;
+            }
+
+            &.is-register {
+                text-align: center;
+                > label {
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    > input {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        > .forgot-password {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            > a {
+                .ts_fast;
+                .text_large;
+                color: @aqua;
+                text-decoration: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        > button {
+            width: 100%;
+            .text_large;
+            font-weight: 600;
+            padding: 10px;
+            margin: 40px auto 40px;
+            border-radius: 5px;
+            background-color: @aqua_dark;
+            color: @white;
+            border: none;
+            outline: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        > .oauth {
+            border-top: 1px solid @grey;
+            width: 100%;
+
+            button {
+                margin: 20px auto 20px;
+                border-radius: 5px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: center;
+                &:hover {
+                    cursor: pointer;
+                }
+
+                > h1 {
+                    .text_large;
+                    font-weight: 400;
+                    color: @white;  
+
+                    > i.fa {
+                        .title_normal;
+                        font-weight: 600;
+                        margin-right: 15px;
+                    }
+
+                }
+            }
+
+            > .google {
+                width: 100%;
+                > button {
+                    background-color: @red_google;
+                }
+            }
+        }
+    }
+
+    
+    .onMobile({
+        padding-left: 0;
+        padding-right: 0;
+
+        > form {
+            width: 100%;
+
+            > .oauth {
+                button {
+                   > .icon > img {
+                       height: 30px;
+                       width: 30px;
+                   }
+                }
+            }
+        }
+    });
+}

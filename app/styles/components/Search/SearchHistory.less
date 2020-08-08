@@ -1,0 +1,100 @@
+div.search-history {
+    > .title {
+        .title_xlarge;
+        margin-top: 0;
+        color: @aqua;
+    }
+
+    >.searches {
+        width: 100%;
+
+        > .no-data {
+            .text_large;
+            text-align: center;
+            font-style: italic;
+        }
+
+        > .search {
+            .ts_fast;
+            margin: 10px 5px;
+            border: 1px solid @grey_dark;
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px @grey_light;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            > .time {
+                width: 100%;
+                .text_medium;
+                font-style: italic;
+            }
+
+            > .trip {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h4 {
+                    .text_medium;
+                    color: @aqua;
+                    margin-bottom: 0;
+                }
+
+                h5 {
+                    .text_small;
+                    margin-top: 0;
+                }
+
+                > .date {
+                    width: 25%;
+                }
+                > .origin {
+                    width: 25%;
+                }
+                > .icon {
+                    width: 25%;
+                    padding-right: 10%;
+                    text-align: center;
+                    > img {
+                        width: 33%;
+                    }
+                }
+                >.destination {
+                    width: 25%;
+                }
+
+            }
+        }
+    }
+
+    .onMobile({
+        padding-left: 0;
+
+        > .searches {
+            > .search {
+                > .trip {
+                    > .origin {
+                        width: 30%;
+                    }
+
+                    > .destination {
+                        width: 30%;
+                    }
+                    
+                    > .icon {
+                        width: 15%;
+                        > img {
+                            width: 90%;
+                        }
+                    } 
+                }
+            }
+        }
+    });
+}

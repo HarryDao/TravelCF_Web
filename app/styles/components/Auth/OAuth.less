@@ -1,0 +1,26 @@
+div.oauth.error {
+    > .inner {
+        text-align: center;
+        > h1 {
+            .title_large;
+
+            &.error {
+                color: @red_light;
+            }
+
+            &.success {
+                color: @green_light;
+            }
+
+        }
+        > h2 {
+            .text_large;
+            color: @white;
+
+            > .highlight {
+                color: @aqua;
+                font-weight: 600;
+            }
+        }
+    }
+}

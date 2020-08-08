@@ -1,0 +1,40 @@
+div.activation {
+    min-height: 1200px;
+    padding: 100px;
+
+    > .result {
+        text-align: center;
+        
+        p {
+            .text_large;
+            color: @white;
+
+            > .highlight {
+                color: @aqua;
+                font-weight: 600;
+            }
+        }
+        
+        > h1 {
+            .title_large; 
+        }
+
+        &.success {
+            > h1 {
+                color: @green_light;
+            }
+        }
+
+        &.fail {
+            > h1 {
+                color: @red_light;
+            }
+        }
+    }
+
+    
+    .onMobile({
+        padding: 100px 20px;
+    });
+    
+}

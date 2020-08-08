@@ -1,0 +1,47 @@
+@import './bases/vars.less';
+@import './bases/functions.less';
+@import './bases/mixins.less';
+
+body {
+    margin: 0;
+    #root {
+        .box_sizing_border;
+        * {
+            .box_sizing_border;
+        }
+        z-index: 0;
+        width: 100%;
+        background-color: @black_light;
+        min-height: 900px;
+       
+        > .inner {
+            width: 100%;
+            @import './components/Auth/Activation.less';
+            @import './components/Header.less';
+            @import './components/Footer.less';
+            
+            .container {
+                min-height: 70vh;
+                z-index: 2;
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                .onMobile({
+                    width: 95%;
+                });
+
+                @import './components/Home.less';
+                @import './components/Auth/Login.less';
+                @import './components/Auth/OAuth.less';
+
+                @import './components/Search/SearchForm.less';
+                @import './components/Search/SearchHistory.less';
+                @import './components/Search/SearchResult.less';
+            }
+        }
+    }
+}
+
+
