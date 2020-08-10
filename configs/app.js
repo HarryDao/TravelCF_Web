@@ -1,33 +1,37 @@
+const PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
+
 module.exports = {
-    PORT: 80,
-    SERVER_URL: '',
+    PORT: 3000,
+    PUBLIC_PATH: PUBLIC_PATH,
+    SERVER_URL: PUBLIC_PATH === '/' ? '' : PUBLIC_PATH,
     // SERVER_URL: 'http://localhost:3101',
     PAGES: {
         home: {
-            path: '/',
+            path: `${PUBLIC_PATH}/`,
             navName: 'Home',
         },
         login: {
-            path: '/user/login',
+            path: `${PUBLIC_PATH}/user/login`,
             navName: 'Login'
         },
         activation: {
-            path: '/user/activation',
+            path: `${PUBLIC_PATH}/user/activation`,
+            shortPath: '/user/activation',
         },
         forgotPassword: {
-            path: '/user/forgot-password',
+            path: `${PUBLIC_PATH}/user/forgot-password`,
         },
         resetPassword: {
-            path: '/user/reset-password',
+            path: `${PUBLIC_PATH}/user/reset-password`,
         },
         oAuthGoogle: {
-            path: '/user/oauth/google'
+            path: `${PUBLIC_PATH}/user/oauth/google`,
         },
         oAuthFacebook: {
-            path: '/user/oauth/facebook'
+            path: `${PUBLIC_PATH}/user/oauth/facebook`
         },
         search: {
-            path: '/search'
+            path: `${PUBLIC_PATH}/search`
         },
     },
     MIN_FETCH_DURATION: 1000,

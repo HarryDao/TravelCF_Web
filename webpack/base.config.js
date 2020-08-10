@@ -1,12 +1,13 @@
 const Path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PUBLIC_PATH = require('../configs/app').PUBLIC_PATH || '/';
 
 module.exports = {
     entry: './app/index.js',
     output: {
         filename: 'bundle.[hash].js',
         path: Path.resolve(__dirname, '../dist'),
-        publicPath: '/'
+        publicPath: PUBLIC_PATH,
     },
     module: {
         rules: [
@@ -32,9 +33,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jp(e*)g|gif|mp4)$/,
-                use: [
-                    { loader: 'file-loader' }
-                ]
+                loader: 'file-loader',
+                options: {
+                    publicPath: PUBLIC_PATH
+                }
             },
         ]
     },

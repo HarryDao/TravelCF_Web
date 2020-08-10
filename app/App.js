@@ -10,16 +10,15 @@ import Activation from './components/Auth/Activation';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import ResetPassword from './components/Auth/ResetPassword';
 import OAuthGoogle from './components/Auth/OAuthGoogle';
-import { PAGES } from '../configs/app';
-
+import { PUBLIC_PATH, PAGES } from '../configs/app';
 
 class App extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={PUBLIC_PATH}>
                 <div>
                     <Switch>
-                        <Route path={PAGES.activation.path} component={Activation} />
+                        <Route path={PAGES.activation.shortPath} component={Activation} />
 
                         <BrowserRouter>
                             <div>
